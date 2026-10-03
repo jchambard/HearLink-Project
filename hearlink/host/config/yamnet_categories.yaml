@@ -1,0 +1,39 @@
+dangerous:
+  - "Siren"
+  - "Civil defense siren"
+  - "Emergency vehicle"
+  - "Ambulance (siren)"
+  - "Police car (siren)"
+  - "Fire engine, fire truck (siren)"
+  - "Car horn, honking"
+  - "Smoke detector, smoke alarm"
+  - "Fire alarm"
+  - "Screaming"
+  - "Gunshot, gunfire"
+
+social:
+  - "Speech"
+  - "Conversation"
+  - "Narration, monologue"
+  - "Child speech, kid speaking"
+  - "Doorbell"
+  - "Door"
+  - "Telephone"
+  - "Telephone bell ringing"
+  - "Ringtone"
+
+ambient:
+  - "Music"
+  - "Musical instrument"
+  - "Dog"
+  - "Bark"
+  - "Traffic noise, roadway noise"
+  - "Motor vehicle (road)"
+  - "Rain"
+  - "Wind"
+  - "Thunder"
+
+confidence_thresholds:
+  dangerous: 0.3
+  social: 0.4
+  ambient: 0.5

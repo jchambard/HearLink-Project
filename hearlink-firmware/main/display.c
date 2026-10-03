@@ -194,10 +194,11 @@ static void fb_draw_icon(int px, int py, IconType icon)
 // Convert direction byte → (x, y) position on ring (top-left of ICON_SIZE box)
 static void direction_to_xy(uint8_t direction, int *x, int *y)
 {
-    // Map 0–255 → 0–2π. 0 = east (right), clockwise.
+    // Map 0–255 → 0–2π. 0 = north (top/front), clockwise.
+    // Display is physically rotated 90° CW, so screen-left = physical-top.
     float angle = ((float)direction / 256.0f) * 2.0f * (float)M_PI;
-    float fx    = RING_CENTER_X + (float)RING_RADIUS * cosf(angle) - ICON_SIZE / 2.0f;
-    float fy    = RING_CENTER_Y + (float)RING_RADIUS * sinf(angle) - ICON_SIZE / 2.0f;
+    float fx    = RING_CENTER_X - (float)RING_RADIUS * cosf(angle) - ICON_SIZE / 2.0f;
+    float fy    = RING_CENTER_Y - (float)RING_RADIUS * sinf(angle) - ICON_SIZE / 2.0f;
     *x = (int)fx;
     *y = (int)fy;
 }

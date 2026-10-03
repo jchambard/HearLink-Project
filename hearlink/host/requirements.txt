@@ -1,0 +1,14 @@
+numpy>=1.24.0
+scipy>=1.10.0
+librosa>=0.10.0
+
+# TF 2.16+ ships universal wheels — no longer needs tensorflow-macos on arm64
+tensorflow>=2.16.0
+tensorflow-hub>=0.14.0
+
+pyyaml>=6.0
+coloredlogs>=15.0
+matplotlib>=3.7.0
+
+pytest>=7.4.0
+pytest-asyncio>=0.21.0

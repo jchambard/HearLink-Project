@@ -77,12 +77,12 @@ esp_err_t imu_init(i2c_master_bus_handle_t i2c_bus)
 int16_t imu_read_yaw_rate(void)
 {
     uint8_t data[2] = {0};
-    esp_err_t err = mpu_read_regs(MPU6050_GYRO_ZOUT_H, data, 2);
+    esp_err_t err = mpu_read_regs(MPU6050_GYRO_XOUT_H, data, 2);
     if (err != ESP_OK) {
-        ESP_LOGW(TAG, "Gyro Z read failed: %s", esp_err_to_name(err));
+        ESP_LOGW(TAG, "Gyro X read failed: %s", esp_err_to_name(err));
         return 0;
     }
-    // Big-endian: ZOUT_H at [0], ZOUT_L at [1]
+    // Big-endian: XOUT_H at [0], XOUT_L at [1]
     return (int16_t)((uint16_t)data[0] << 8 | data[1]);
 }
 

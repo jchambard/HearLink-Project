@@ -11,6 +11,7 @@
 #define MPU6050_PWR_MGMT_1  0x6B
 #define MPU6050_GYRO_CONFIG 0x1B
 #define MPU6050_GYRO_ZOUT_H 0x47
+#define MPU6050_GYRO_XOUT_H 0x43
 
 /**
  * Add MPU-6050 to the shared I²C bus and wake it from sleep.

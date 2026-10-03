@@ -1,0 +1,20 @@
+mic_array:
+  radius_m: 0.095
+  num_mics: 4
+
+beamforming:
+  num_beams: 24
+  speed_of_sound_mps: 343.0
+
+processing:
+  window_duration_sec: 1.0
+  process_interval_sec: 0.5
+
+imu:
+  sample_rate_hz: 100
+  calibration_duration_sec: 2.0
+
+buzzer_preferences:
+  dangerous: true
+  social: false
+  ambient: false
