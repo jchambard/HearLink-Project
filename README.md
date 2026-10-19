@@ -4,6 +4,8 @@
 
 HearLink is a two-part system built at StarkHacks. A collar-mounted ESP32-S3 captures audio from a four-microphone ring and head yaw from an IMU, then streams it over Wi-Fi to a host computer. The host beamforms the array to find where sounds are coming from, classifies them with Google's YAMNet, sorts them into **Dangerous / Social / Ambient**, and sends feedback back to the wearer: a directional icon on a head-mounted OLED compass and a haptic buzz from the collar buzzer closest to the sound.
 
+> **My role:** I was the only software engineer on the team. I wrote all of the ESP32-S3 firmware and the Python host pipeline (networking, beamforming, YAMNet classification, feedback routing, and tests), and helped drive the hardware design choices.
+
 ```
                     ┌────────────────────────────────────────────┐
    4× I²S MEMS mics │  ESP32-S3 (collar)                         │  Wi-Fi SoftAP "HearLink"
